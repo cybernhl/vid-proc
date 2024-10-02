@@ -246,7 +246,7 @@ class AudioTrackToAacConvertor {
                 var sample = shortSamples.get()
 
                 // Put processed sample into encoder's buffer
-                inBuffer.putShort((sample * getFactor(elapsedMillis)).toShort())
+                inBuffer.putShort((sample * getFactor(elapsedMillis)).toInt().toShort())
             }
 
             elapsedMillis += sampleDurationMillis
